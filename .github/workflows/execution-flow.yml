@@ -1,4 +1,5 @@
 name: Website Deployment
+# event
 on:
   push:
     branches:
@@ -50,7 +51,7 @@ jobs:
           echo "repo: ${{ env.SECRET }}"
           echo "env: $SECRET"
   build:
-    needs: test
+    # needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
